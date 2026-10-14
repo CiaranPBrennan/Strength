@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#12181F">
+<meta name="apple-mobile-web-app-title" content="Strength">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<title>Strength</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3F5F7; --surface:#FFFFFF; --line:#D9E0E7; --text:#111A23; --muted:#566676;
+  --plate:#1F5FD6; --plate-ink:#FFFFFF; --done:#E4EAF1;
+  --display:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
+  --body:'Barlow',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#12181F; --surface:#1B242E; --line:#2B3744; --text:#EEF2F6; --muted:#97A5B4;
+    --plate:#4C8DFF; --plate-ink:#06101F; --done:#26384A;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#12181F; --surface:#1B242E; --line:#2B3744; --text:#EEF2F6; --muted:#97A5B4;
+  --plate:#4C8DFF; --plate-ink:#06101F; --done:#26384A;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--text);font:500 16px/1.3 var(--body);
+  -webkit-tap-highlight-color:transparent;touch-action:manipulation}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;padding:0}
+button:focus-visible,a:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--plate);outline-offset:2px}
+.wrap{max-width:640px;margin:0 auto;padding:6px 12px 150px}
+
+/* top bar */
+.top{display:flex;align-items:center;gap:8px;padding:2px 0 8px}
+.top a,.top button{min-height:40px;display:flex;align-items:center;padding:0 14px;border-radius:20px;border:1.5px solid var(--line);
+  color:var(--text);text-decoration:none;font-weight:600;font-size:15px}
+.top .gap{flex:1}
+.seg{display:flex;gap:8px}
+.gear{width:46px;height:46px;flex:0 0 auto;border-radius:12px;background:var(--surface);border:1.5px solid var(--line);display:grid;place-items:center;color:var(--text)}
+.tab{flex:1;min-width:0;min-height:46px;padding:0 4px;border-radius:12px;background:var(--surface);border:1.5px solid var(--line);font:700 17px/1.05 var(--display);letter-spacing:.02em}
+.tab[aria-selected="true"]{background:var(--plate);border-color:var(--plate);color:var(--plate-ink)}
+
+/* step nav */
+.nav{display:flex;align-items:center;gap:8px;margin:10px 0 8px}
+.arrow{width:52px;height:52px;border-radius:12px;border:1.5px solid var(--line);background:var(--surface);font:600 30px/1 var(--display)}
+.arrow:disabled{opacity:.3}
+.arrow.hot{background:var(--plate);border-color:var(--plate);color:var(--plate-ink)}
+.navt{flex:1;min-width:0;text-align:center}
+.nt{font:700 24px/1.05 var(--display);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ns{color:var(--muted);font-size:13px;margin-top:2px}
+.sub{margin:0 2px 10px;color:var(--muted);font-size:14px}
+.info{background:var(--surface);border:1.5px solid var(--line);border-radius:16px;padding:16px;font-size:17px;line-height:1.4}
+
+/* cards */
+.ex{background:var(--surface);border:1.5px solid var(--line);border-radius:16px;padding:12px;margin-bottom:10px}
+.ex.complete{background:var(--done);border-color:transparent}
+.ex-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.ex h2{font:600 25px/1.05 var(--display);margin:0}
+.scheme{text-align:right;flex:0 0 auto}
+.scheme .sr{font:700 28px/1 var(--display)}
+.scheme .wt{color:var(--muted);font-size:14px;margin-top:2px;max-width:150px}
+.act{display:flex;gap:8px;margin-top:10px}
+.donebtn{flex:1;min-height:56px;border-radius:14px;background:var(--plate);color:var(--plate-ink);font:700 22px/1 var(--display);letter-spacing:.02em}
+.donebtn.fin{background:transparent;color:var(--muted);border:1.5px solid var(--line);cursor:default}
+.undo{width:56px;min-height:56px;border-radius:14px;border:1.5px solid var(--line);font:600 26px/1 var(--display)}
+details{margin-top:8px}
+summary{min-height:36px;display:flex;align-items:center;color:var(--plate);font-weight:600;font-size:15px;cursor:pointer;list-style:none}
+summary::-webkit-details-marker{display:none}
+details[open] summary{margin-bottom:2px}
+details p{margin:0 0 4px;color:var(--muted);font-size:15px;line-height:1.4}
+.row1{display:flex;align-items:center;gap:12px;width:100%;text-align:left;min-height:60px;background:var(--surface);border:1.5px solid var(--line);
+  border-radius:14px;padding:8px 14px;margin-bottom:8px}
+.row1.complete{background:var(--done);border-color:transparent}
+.row1 .rt{flex:1;min-width:0}
+.row1 .rn{font:600 21px/1.1 var(--display)}
+.row1 .rm{color:var(--muted);font-size:14px;line-height:1.25}
+.chk{width:34px;height:34px;border-radius:50%;border:2px solid var(--line);flex:0 0 auto;display:grid;place-items:center;font-weight:700;color:var(--plate-ink)}
+.row1.complete .chk{background:var(--plate);border-color:var(--plate)}
+
+/* dock */
+.dock{position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:1.5px solid var(--line);
+  padding:0 12px calc(8px + env(safe-area-inset-bottom,0px));z-index:5}
+.dock-in{max-width:640px;margin:0 auto}
+.tbar{height:4px;background:var(--line);margin:0 -12px 8px;overflow:hidden}
+.tbar i{display:block;height:100%;width:0;background:var(--plate)}
+.t-top{display:flex;align-items:center;gap:10px}
+.clock{font:700 50px/1 var(--display);font-variant-numeric:tabular-nums;min-width:104px}
+.clock.fin{color:var(--plate)}
+.t-meta{flex:1;min-width:0;color:var(--muted);font-size:13px;line-height:1.15;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.t-btns{display:flex;gap:6px}
+.sm{min-width:46px;min-height:44px;border-radius:12px;border:1.5px solid var(--line);font-weight:600;font-size:15px}
+.presets{display:flex;gap:6px;margin-top:8px}
+.pre{flex:1;min-height:48px;border-radius:12px;background:var(--plate);color:var(--plate-ink);font:700 22px/1 var(--display)}
+.flash{animation:flash .5s 4}
+@keyframes flash{50%{background:var(--done)}}
+@media (prefers-reduced-motion: reduce){.flash{animation:none}}
+
+/* overlays */
+.editor{position:fixed;inset:0;background:var(--bg);z-index:10;display:none;flex-direction:column;
+  padding:calc(12px + env(safe-area-inset-top,0px)) 14px calc(12px + env(safe-area-inset-bottom,0px))}
+.editor.open{display:flex}
+.editor h2{font:700 28px/1 var(--display);margin:0 0 8px}
+.editor p{margin:0 0 8px;color:var(--muted);font-size:14px}
+.editor code{background:var(--surface);padding:1px 5px;border-radius:4px;font-size:13px}
+.editor textarea{flex:1;width:100%;resize:none;border-radius:12px;border:1.5px solid var(--line);background:var(--surface);
+  color:var(--text);padding:12px;font:15px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.ed-btns{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.ed-btns button{min-height:48px;padding:0 16px;border-radius:12px;border:1.5px solid var(--line);font-weight:600}
+.ed-btns .save{background:var(--plate);border-color:var(--plate);color:var(--plate-ink)}
+.err{color:#d6453d;font-size:14px;min-height:20px;margin-top:6px}
+.tg{min-height:48px;padding:0 16px;border-radius:24px;border:1.5px solid var(--line);color:var(--muted);font-size:16px;font-weight:600;text-align:left;margin-bottom:10px}
+.tg[aria-pressed="true"]{border-color:var(--plate);color:var(--text);background:var(--surface)}
+.tg[aria-pressed="true"]::before{content:"On: ";color:var(--plate)}
+.tg[aria-pressed="false"]::before{content:"Off: "}
+.stack{display:flex;flex-direction:column;align-items:stretch}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="seg">
+    <div class="seg" id="tabs" role="tablist" style="flex:1"></div>
+    <button class="gear" id="setBtn" aria-label="Settings"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/></svg></button>
+  </div>
+  <div class="nav">
+    <button class="arrow" id="prev" aria-label="Previous">‹</button>
+    <div class="navt"><div class="nt" id="nt"></div><div class="ns" id="ns"></div></div>
+    <button class="arrow" id="next" aria-label="Next">›</button>
+  </div>
+  <div id="list"></div>
+</div>
+
+<video id="nosleep" muted loop playsinline webkit-playsinline tabindex="-1" aria-hidden="true" style="position:fixed;left:0;bottom:0;width:2px;height:2px;opacity:.01;pointer-events:none" src="data:video/mp4;base64,AAAAIGZ0eXBpc29tAAACAGlzb21pc28yYXZjMW1wNDEAAANMbW9vdgAAAGxtdmhkAAAAAAAAAAAAAAAAAAAD6AAAB9AAAQAAAQAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAnZ0cmFrAAAAXHRraGQAAAADAAAAAAAAAAAAAAABAAAAAAAAB9AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAABAAAAAAEAAAABAAAAAAAAkZWR0cwAAABxlbHN0AAAAAAAAAAEAAAfQAAAAAAABAAAAAAHubWRpYQAAACBtZGhkAAAAAAAAAAAAAAAAAAAoAAAAUABVxAAAAAAALWhkbHIAAAAAAAAAAHZpZGUAAAAAAAAAAAAAAABWaWRlb0hhbmRsZXIAAAABmW1pbmYAAAAUdm1oZAAAAAEAAAAAAAAAAAAAACRkaW5mAAAAHGRyZWYAAAAAAAAAAQAAAAx1cmwgAAAAAQAAAVlzdGJsAAAAuXN0c2QAAAAAAAAAAQAAAKlhdmMxAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAEAAQABIAAAASAAAAAAAAAABFUxhdmM2MC4zMS4xMDIgbGlieDI2NAAAAAAAAAAAAAAAGP//AAAAL2F2Y0MBQsAe/+EAF2dCwB7ZBCbARAAAAwAEAAADACg8WLkgAQAFaMuA5LIAAAAQcGFzcAAAAAEAAAABAAAAFGJ0cnQAAAAAAAALqAAAC6gAAAAYc3R0cwAAAAAAAAABAAAACgAACAAAAAAUc3RzcwAAAAAAAAABAAAAAQAAABxzdHNjAAAAAAAAAAEAAAABAAAACgAAAAEAAAA8c3RzegAAAAAAAAAAAAAACgAAAo8AAAAKAAAACwAAAAoAAAAKAAAACgAAAAoAAAAKAAAACgAAAAoAAAAUc3RjbwAAAAAAAAABAAADfAAAAGJ1ZHRhAAAAWm1ldGEAAAAAAAAAIWhkbHIAAAAAAAAAAG1kaXJhcHBsAAAAAAAAAAAAAAAALWlsc3QAAAAlqXRvbwAAAB1kYXRhAAAAAQAAAABMYXZmNjAuMTYuMTAwAAAACGZyZWUAAALybWRhdAAAAnAGBf//bNxF6b3m2Ui3lizYINkj7u94MjY0IC0gY29yZSAxNjQgcjMxMDggMzFlMTlmOSAtIEguMjY0L01QRUctNCBBVkMgY29kZWMgLSBDb3B5bGVmdCAyMDAzLTIwMjMgLSBodHRwOi8vd3d3LnZpZGVvbGFuLm9yZy94MjY0Lmh0bWwgLSBvcHRpb25zOiBjYWJhYz0wIHJlZj0zIGRlYmxvY2s9MTowOjAgYW5hbHlzZT0weDE6MHgxMTEgbWU9aGV4IHN1Ym1lPTcgcHN5PTEgcHN5X3JkPTEuMDA6MC4wMCBtaXhlZF9yZWY9MSBtZV9yYW5nZT0xNiBjaHJvbWFfbWU9MSB0cmVsbGlzPTEgOHg4ZGN0PTAgY3FtPTAgZGVhZHpvbmU9MjEsMTEgZmFzdF9wc2tpcD0xIGNocm9tYV9xcF9vZmZzZXQ9LTIgdGhyZWFkcz0xIGxvb2thaGVhZF90aHJlYWRzPTEgc2xpY2VkX3RocmVhZHM9MCBucj0wIGRlY2ltYXRlPTEgaW50ZXJsYWNlZD0wIGJsdXJheV9jb21wYXQ9MCBjb25zdHJhaW5lZF9pbnRyYT0wIGJmcmFtZXM9MCB3ZWlnaHRwPTAga2V5aW50PTI1MCBrZXlpbnRfbWluPTUgc2NlbmVjdXQ9NDAgaW50cmFfcmVmcmVzaD0wIHJjX2xvb2thaGVhZD00MCByYz1jcmYgbWJ0cmVlPTEgY3JmPTQwLjAgcWNvbXA9MC42MCBxcG1pbj0wIHFwbWF4PTY5IHFwc3RlcD00IGlwX3JhdGlvPTEuNDAgYXE9MToxLjAwAIAAAAAXZYiEBHyYoAAi2ycnJ1111111111114AAAAAGQZo4CPhGAAAAB0GaVAI+EYAAAAAGQZpgEfCMAAAABkGagBHwjAAAAAZBmqAR8IwAAAAGQZrAEfCMAAAABkGa4BHwjAAAAAZBmwAQ8IwAAAAGQZsgP8Iw"></video>
+<div class="dock" id="dock">
+  <div class="dock-in">
+    <div class="tbar"><i id="tbar"></i></div>
+    <div class="t-top">
+      <div class="clock" id="clock">0:00</div>
+      <div class="t-meta" id="tmeta">Tap a time to start</div>
+      <div class="t-btns">
+        <button class="sm" id="minus">−15</button>
+        <button class="sm" id="plus">+15</button>
+        <button class="sm" id="stop">Stop</button>
+      </div>
+    </div>
+    <div class="presets" id="presets"></div>
+  </div>
+</div>
+
+<div class="editor" id="settings">
+  <h2>Settings</h2>
+  <div class="stack">
+    <button class="tg" id="tgWake" aria-pressed="false">Keep screen awake</button>
+    <button class="tg" id="tgAuto" aria-pressed="true">Start rest timer after each set</button>
+    <button class="tg" id="tgBeep" aria-pressed="true">Beep when rest ends</button>
+  </div>
+  <p id="wakeInfo" style="color:var(--muted);font-size:13px;margin:0 0 12px"></p>
+  <div class="ed-btns">
+    <button id="stEdit">Edit routine</button>
+    <button id="stReset">Clear today's progress</button>
+    <button class="save" id="stClose">Close</button>
+  </div>
+</div>
+
+<div class="editor" id="editor">
+  <h2>Edit routine</h2>
+  <p>One line per exercise: <code>Name | 4 x 6 | 95 lb | 2:00 | note</code>. Weight, rest and note are optional. Start each workout with <code>#</code>, like <code># Lower</code>. A line starting with <code>##</code> is a section heading (<code>## Title | subtitle</code>). Rest accepts <code>90s</code>, <code>2m</code> or <code>1:30</code>; use <code>0</code> for no rest.</p>
+  <textarea id="ta" spellcheck="false" autocapitalize="off" autocomplete="off"></textarea>
+  <div class="err" id="err"></div>
+  <div class="ed-btns">
+    <button class="save" id="edSave">Save routine</button>
+    <button id="edCancel">Cancel</button>
+    <button id="edCopy">Copy text</button>
+    <button id="edSample">Load default</button>
+  </div>
+</div>
+
+<script>
+(function(){
+'use strict';
+
+var PRESETS = [30,45,60,90,120,180];
+var BASE = ["# Lower",
+"",
+"## Warm-up, 5 min, non-negotiable | Do it before loading plates.",
+"March or stair climbs | 1 x 2 min | | 0 | Brisk",
+"Bodyweight squats | 1 x 10 | | 0",
+"Hip hinges | 1 x 10 | Hands on hips | 0 | Butt to the wall behind you",
+"Glute bridges | 1 x 10 | | 0",
+"Empty-bar RDL | 1 x 8 | 17.8 lb bar | 0 | Before loading plates",
+"",
+"## Superset A, 3 rounds | Rest 60 sec after each round. Strip the bar after round 3, Superset B reuses the 10s.",
+"A1 Barbell RDL | 3 x 10–15 | 71.6 lb | 0 | Per side 10+10+4.4+2.5. Round 1 is a form audit. Knees slightly bent, hips way back, bar slides down the legs. Stop the set the moment the back wants to round. When all sets hit 15 with a flat back, go to about 80 lb (swap the 2.5s for 4.4s).",
+"A2 Dumbbell reverse lunge | 3 x 8–12 | 20 lb DBs | 60 | Per leg. Rear knee lightly touches the floor, front shin near vertical, torso tall. Drive up through the front heel. Progress with 3-sec descents, then heavier DBs.",
+"",
+"## Superset B, 3 rounds | Rest 60 sec after each round.",
+"B1 Barbell hip thrust | 3 x 10–15 | 66.6 lb | 0 | Per side 10+10+4.4. Shoulders on bench, towel under the bar. Squeeze 1 sec at the top, hips level with the bench, chin tucked. Add 8.8 lb (the spare 4.4 pair) when all sets hit 15.",
+"B2 Goblet squat | 3 x 10–12 | 20 lb DB | 60 | DB at chest. 3-sec descent, full depth, drive up. Slowness is the load.",
+"",
+"## Superset C, 3 rounds | Rest 60 sec after each round. Done in about 35 min.",
+"C1 Calf raise | 3 x 15–20 | Bodyweight or DBs | 0 | Full stretch at the bottom, pause 1 sec at the top. Hold DBs when 20 gets easy.",
+"C2 Plank | 3 x 45–60s | Bodyweight | 60 | Straight line ear to ankle. No sagging hips, no pyramid butt. Breathe.",
+"",
+"## Loading ritual | Big plates innermost against the sleeve stop, then 4.4s, 2.5s outside, collars snug. Both barbell lifts use all four 10s, so strip and reload between supersets. Log totals after each superset.",
+"## Form check tomorrow | Hamstring soreness = RDLs done right. Lower-back soreness = the hinge drifted into a squat. Cue: point your butt at the wall behind you.",
+"",
+"# Upper",
+"",
+"## Tempo rule | 3-second lowering on every rep. No exceptions. Supersets: two exercises back to back, rest 60 sec, that is 1 round. Round 3: both exercises to failure.",
+"",
+"## Warm-up, about 5 min | Don't skip.",
+"Arm circles | 1 x 10 each way | | 0 | Small to big, forward then backward",
+"Scap push-ups | 1 x 10 | | 0 | Arms straight, pinch the blades together then push them apart. Only the blades move.",
+"Light first set | 1 x 10 | 10 lb DBs | 0 | Before the first exercise of each superset: one easy set with the 10s",
+"",
+"## Superset A, chest and back | 3 rounds",
+"A1 Dumbbell bench press | 3 x 12–15 | 20 lb DBs | 0 | Lower 3 sec until you feel the chest stretch, press up and slightly in. Pause 1 sec at the bottom.",
+"A2 Single-arm row | 3 x 12–15 | 20 lb DB | 60 | Per arm, both arms = 1 set. Hand and knee on bench, back flat like a tabletop. Pull to the hip, elbow to back pocket, lower slow.",
+"",
+"## Superset B, shoulders | 3 rounds",
+"B1 Seated Arnold press | 3 x 10–12 | 15 lb DBs | 0 | Start palms facing you at chin height, rotate to palms-forward as you press up.",
+"B2 Lateral raises | 3 x 15–20 | 10 lb DBs | 60 | Slight elbow bend, raise to shoulder height, 3-sec lower. If you're rocking, the reps don't count.",
+"",
+"## Superset C, lats and arms | 3 rounds",
+"C1 Dumbbell pullover | 3 x 12–15 | 20 lb DB | 0 | One DB in both palms above the chest. Lower in an arc behind your head until you feel the stretch, pull back over. Slight elbow bend only.",
+"C2 Curls then overhead triceps | 3 x 10–12 | 15 lb DBs | 60 | Alternating curls 10–12 per arm, then straight into one DB overhead, both hands under the top plate, 12–15 reps. Elbows point forward. Use 15–20 lb.",
+"",
+"## Finisher, optional, 2 min",
+"Feet-elevated push-ups | 1 x failure | Bodyweight | 0 | Feet on the bench, one set to absolute failure",
+"",
+"## Full session, about 40–45 min | 4 rounds per superset instead of 3. Add Superset D below. Keep 60-sec rests, work more rather than resting longer.",
+"D1 Rear-delt flyes | 4 x 15 | 10 lb DBs | 0 | Full session only",
+"D2 Second biceps or triceps exercise | 4 x 12 | | 60 | Full session only. Pick your own.",
+"",
+"## Progression rules | 1. Last set of every exercise must reach failure inside the rep range. Flat sets (20/20/20) mean you stopped counting, not failing. 2. Sailing past the top of the range? Slow the lowering to 4 sec, or pause 2 sec at the stretch. 3. Still too easy? Time for the barbell or heavier adjustable dumbbells."
+].join('\n');
+var LIGHT = ["# Light Upper",
+"",
+"## Light day rule | 20–25 min. Stop every set with 5+ reps left in the tank. Never to failure. Easy tempo, no grinding. The goal is to feel better afterward, not tired.",
+"",
+"## Light warm-up, about 3 min | Light Upper. Keep it easy, you are just getting warm.",
+"Arm circles | 1 x 10 each way | | 0 | Small to big, forward then backward",
+"Cat-cow | 1 x 8 | | 0 | On all fours, slow, move the whole spine",
+"Thoracic rotations | 1 x 6 | | 0 | Per side. On all fours, hand behind your head, rotate the elbow up toward the ceiling",
+"",
+"## Circuit, 3 rounds | No rest between exercises. Rest 45 sec after A5.",
+"A1 Dumbbell floor press | 3 x 12–15 | 20 lb DBs | 0 | Lie on your back, knees bent, feet flat. Upper arms about 45° from your body. Lower until your triceps lightly touch the floor, press up.",
+"A2 Single-arm row | 3 x 12–15 | 20 lb DB | 0 | Per arm. Hand and knee on bench, back flat. Pull to the hip, squeeze the shoulder blade back, lower slow.",
+"A3 Rear-delt raise | 3 x 12–15 | 10 lb DBs | 0 | Hinge forward until your torso is near parallel to the floor. Raise both arms out to the sides to shoulder height, elbows slightly bent. Go light and slow.",
+"A4 Lateral raises | 3 x 12–15 | 10 lb DBs | 0 | Stand tall, lead with the elbows, raise to shoulder height. No swinging or shrugging.",
+"A5 Curls | 3 x 12–15 | 15 lb DBs | 45 | Elbows pinned to your sides, palms forward, lower slowly.",
+"",
+"## Shoulder health | Quick finisher, 3–4 min.",
+"Y-T-W raises | 1 x 6–8 each | Bodyweight | 0 | Face down on the floor or bench. Lift arms into a Y (overhead diagonal, thumbs up), a T (straight out), then a W (elbows bent, pulling back). Hold each 2 sec. Add the 20s only once easy.",
+"External rotation | 2 x 12 | 5–10 lb | 0 | Per arm. Lie on your side, elbow bent 90° and tucked against your ribs. Rotate the forearm up toward the ceiling, lower slowly. A 20 is too heavy here, use a light weight or a water bottle.",
+"",
+"# Light Lower",
+"",
+"## Light day rule | 15–25 min. Stop every set with 5+ reps left in the tank. Never to failure. Easy tempo. Keep the legs fresh for Friday and the weekend.",
+"",
+"## Light warm-up, about 3 min | Light Lower. Keep it easy, you are just getting warm.",
+"March in place | 1 x 1 min | | 0 | Brisk, knees up",
+"Bodyweight squats | 1 x 10 | | 0",
+"Hip hinges | 1 x 10 | Hands on hips | 0 | Butt to the wall behind you",
+"Glute bridges | 1 x 10 | | 0",
+"",
+"## Circuit, 3 rounds | No rest between exercises. Rest 45 sec after A5.",
+"A1 Goblet squat | 3 x 10–12 | 20 lb DB | 0 | DB at chest, smooth 2-sec descent, full depth, stand up easy. Stop well short of failure.",
+"A2 Dumbbell RDL | 3 x 10–12 | 20 lb DBs | 0 | Soft knees, hips way back, DBs slide down the legs. Stop where your back wants to round.",
+"A3 Split squat | 3 x 8–10 | Bodyweight or 20 lb DBs | 0 | Per leg. Feet staggered, drop the rear knee straight down, drive up through the front heel.",
+"A4 Suitcase carry | 3 x 30 sec | 20 lb DB | 0 | Per side. Walk tall, no leaning, no shoulder hike.",
+"A5 Dead bug | 3 x 8 | Bodyweight | 45 | Per side. On your back, arms up, knees at 90°. Lower opposite arm and leg slowly while keeping your lower back flat.",
+"",
+"## Mobility, 5 min | Optional, easy.",
+"Hip flexor stretch | 1 x 30 sec | Bodyweight | 0 | Per side. Half-kneeling, tuck the pelvis, lean forward gently.",
+"Thoracic rotations | 1 x 8 | Bodyweight | 0 | Per side. On all fours, hand behind your head, rotate the elbow up toward the ceiling.",
+"Ankle rocks | 1 x 10 | Bodyweight | 0 | Per side. Knee drives forward over the toes, heel stays down."
+].join('\n');
+var SAMPLE = BASE + '\n\n' + LIGHT;
+
+function sget(k,d){try{var v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}}
+function sset(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+var $ = function(id){return document.getElementById(id)};
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function fmt(s){s=Math.max(0,Math.round(s));var m=Math.floor(s/60),r=s%60;return m+':'+(r<10?'0':'')+r}
+function today(){var d=new Date();return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate()}
+
+/* ---------- Routine parsing ---------- */
+function parseRest(t){
+  if(!t) return 60;
+  t=t.trim().toLowerCase();
+  var m;
+  if((m=t.match(/^(\d+):(\d{2})$/))) return +m[1]*60+ +m[2];
+  if((m=t.match(/^(\d+(?:\.\d+)?)\s*m(?:in)?$/))) return Math.round(+m[1]*60);
+  if((m=t.match(/^(\d+)\s*s(?:ec)?$/))) return +m[1];
+  if((m=t.match(/^(\d+)$/))) return +m[1];
+  return 60;
+}
+function parse(text){
+  var days=[],cur=null;
+  text.split('\n').forEach(function(line){
+    var t=line.trim();
+    if(!t||t.indexOf('//')===0) return;
+    if(t.indexOf('##')===0){
+      if(cur){var hp=t.replace(/^#+\s*/,'').split('|');cur.ex.push({header:hp[0].trim(),sub:hp.slice(1).join('|').trim()})}
+      return;
+    }
+    if(t.charAt(0)==='#'){
+      var name=t.replace(/^#+\s*/,'');
+      var bits=name.split(/\s*[—–-]\s*/);
+      cur={short:bits[0]||'Workout',title:bits.slice(1).join(' — '),ex:[]};
+      days.push(cur);
+    } else if(cur){
+      var p=t.split('|').map(function(s){return s.trim()});
+      var m=(p[1]||'').match(/^(\d+)\s*[x×]\s*(.+)$/i);
+      cur.ex.push({
+        name:p[0],
+        sets:m?Math.min(+m[1],12):3,
+        reps:m?m[2].trim():(p[1]||''),
+        weight:p[2]||'',
+        rest:parseRest(p[3]),
+        note:p[4]||''
+      });
+    }
+  });
+  return days.filter(function(d){return d.ex.some(function(e){return !e.header})});
+}
+
+var routineText = sget('routine-text', null);
+if(routineText===null) routineText = SAMPLE;
+else if(!/^#\s*Light Upper/mi.test(routineText)){ routineText = routineText.replace(/\s+$/,'') + '\n\n' + LIGHT; sset('routine-text', routineText); }
+else if(!/Light warm-up/.test(routineText)){ routineText = routineText.slice(0, routineText.search(/^#\s*Light Upper/mi)) + LIGHT; sset('routine-text', routineText); }
+var days = parse(routineText);
+if(!days.length){routineText=SAMPLE;days=parse(SAMPLE)}
+
+/* ---------- State ---------- */
+var tab = sget('last-tab',0); if(tab>=days.length) tab=0;
+var doneKey = function(){return 'done2:'+today()};
+var done = sget(doneKey(),{});
+var auto = sget('auto',true), beep = sget('beep',true), wantWake = sget('wake',true);
+var openNotes = {};
+var stepIdx = 0;
+
+function buildSteps(d){
+  var steps=[],cur=null;
+  d.ex.forEach(function(ex,ei){
+    if(ex.header){cur={title:ex.header,sub:ex.sub,items:[]};steps.push(cur)}
+    else{ if(!cur){cur={title:'',sub:'',items:[]};steps.push(cur)} cur.items.push({ex:ex,ei:ei}) }
+  });
+  return steps;
+}
+function keyOf(ex){return days[tab].short+'|'+ex.name}
+function count(ex){return done[keyOf(ex)]||0}
+function stepKey(){return 'step:'+today()+':'+tab}
+function loadStep(){
+  var steps=buildSteps(days[tab]);
+  var s=sget(stepKey(),null);
+  if(s==null||s>=steps.length){ s=0; for(var i=0;i<steps.length;i++){ if(steps[i].items.length){s=i;break} } }
+  stepIdx=s;
+}
+
+/* ---------- Render ---------- */
+function renderTabs(){
+  $('tabs').innerHTML = days.map(function(d,i){
+    return '<button class="tab" role="tab" data-i="'+i+'" aria-selected="'+(i===tab)+'">'+esc(d.short)+'</button>';
+  }).join('');
+}
+function renderBody(){
+  var steps=buildSteps(days[tab]), st=steps[stepIdx];
+  $('nt').textContent = st.title || days[tab].short;
+  $('ns').textContent = (stepIdx+1)+' of '+steps.length;
+  $('prev').disabled = stepIdx===0;
+  $('next').disabled = stepIdx>=steps.length-1;
+  var complete = st.items.length>0 && st.items.every(function(it){return count(it.ex)>=it.ex.sets});
+  $('next').classList.toggle('hot',complete && stepIdx<steps.length-1);
+  var h='';
+  if(!st.items.length){
+    h='<div class="info">'+esc(st.sub||'')+'</div>';
+  } else {
+    if(st.sub) h+='<p class="sub">'+esc(st.sub)+'</p>';
+    st.items.forEach(function(it){
+      var ex=it.ex, ei=it.ei, c=count(ex), fin=c>=ex.sets, k=keyOf(ex);
+      if(ex.sets===1){
+        var meta=[ex.reps?('1 × '+ex.reps):'',ex.weight,ex.note].filter(Boolean).join(' · ');
+        h+='<button class="row1'+(fin?' complete':'')+'" data-ei="'+ei+'" data-act="toggle"><div class="rt"><div class="rn">'+esc(ex.name)+'</div>'+(meta?'<div class="rm">'+esc(meta)+'</div>':'')+'</div><div class="chk">'+(fin?'✓':'')+'</div></button>';
+      } else {
+        h+='<section class="ex'+(fin?' complete':'')+'"><div class="ex-head"><h2>'+esc(ex.name)+'</h2><div class="scheme"><div class="sr">'+ex.sets+'×'+esc(ex.reps)+'</div>'+(ex.weight?'<div class="wt">'+esc(ex.weight)+'</div>':'')+'</div></div>'+
+          '<div class="act">'+
+          (fin?'<button class="donebtn fin" disabled>✓ All '+ex.sets+' sets done</button>':'<button class="donebtn" data-ei="'+ei+'" data-act="up">Done · set '+(c+1)+' of '+ex.sets+'</button>')+
+          (c>0?'<button class="undo" data-ei="'+ei+'" data-act="down" aria-label="Undo last set">−</button>':'')+
+          '</div>'+
+          (ex.note?'<details data-k="'+esc(k)+'"'+(openNotes[k]?' open':'')+'><summary>Tips</summary><p>'+esc(ex.note)+'</p></details>':'')+
+          '</section>';
+      }
+    });
+  }
+  $('list').innerHTML=h;
+}
+function renderToggles(){
+  $('tgAuto').setAttribute('aria-pressed',auto);
+  $('tgBeep').setAttribute('aria-pressed',beep);
+  var on=!!lock||vidOn;
+  $('tgWake').setAttribute('aria-pressed',on&&wantWake);
+  var how=lock?'screen wake lock':(vidOn?'video fallback':'none active');
+  var inFrame=false;try{inFrame=window.self!==window.top}catch(e){inFrame=true}
+  var sa=(window.navigator.standalone===true)||(window.matchMedia&&matchMedia('(display-mode: standalone)').matches);
+  $('wakeInfo').textContent='Screen awake method: '+how+'. Wake Lock API: '+(('wakeLock' in navigator)?'present':'missing')+
+    (wakeErr?' ('+wakeErr+')':'')+'. In a frame: '+(inFrame?'yes':'no')+'. Home Screen mode: '+(sa?'yes':'no')+'.';
+}
+function renderAll(){renderTabs();renderBody();renderToggles()}
+
+/* ---------- Set counting ---------- */
+function bump(ei,delta){
+  var ex=days[tab].ex[ei], c=count(ex), n=Math.max(0,Math.min(ex.sets,c+delta));
+  if(n===c) return;
+  done[keyOf(ex)]=n; sset(doneKey(),done);
+  renderBody();
+  if(delta>0 && auto && ex.rest>0 && n<ex.sets) startTimer(ex.rest,'Rest after '+ex.name+', set '+n+' of '+ex.sets);
+}
+function go(i){
+  var steps=buildSteps(days[tab]);
+  if(i<0||i>=steps.length) return;
+  stepIdx=i; sset(stepKey(),i); renderBody(); window.scrollTo(0,0);
+}
+
+/* ---------- Timer ---------- */
+var tEnd=0,tTotal=0,running=false,tLabel='',iv=null,actx=null;
+function audio(){
+  try{ if(!actx){var C=window.AudioContext||window.webkitAudioContext; if(C) actx=new C()} if(actx&&actx.state==='suspended') actx.resume() }catch(e){}
+}
+function tone(at,f){
+  if(!actx) return;
+  var o=actx.createOscillator(),g=actx.createGain();
+  o.type='sine';o.frequency.value=f;o.connect(g);g.connect(actx.destination);
+  g.gain.setValueAtTime(0.0001,actx.currentTime+at);
+  g.gain.exponentialRampToValueAtTime(0.4,actx.currentTime+at+0.02);
+  g.gain.exponentialRampToValueAtTime(0.0001,actx.currentTime+at+0.22);
+  o.start(actx.currentTime+at);o.stop(actx.currentTime+at+0.25);
+}
+function startTimer(sec,label){
+  audio();
+  tTotal=sec;tEnd=Date.now()+sec*1000;running=true;tLabel=label||'';
+  $('dock').classList.remove('flash');
+  clearInterval(iv);iv=setInterval(tick,200);tick();
+}
+function tick(){
+  if(!running) return;
+  var left=Math.ceil((tEnd-Date.now())/1000);
+  if(left<=0){ finish(); return }
+  $('clock').textContent=fmt(left);
+  $('clock').classList.remove('fin');
+  $('tmeta').textContent=tLabel||'Timer running';
+  $('tbar').style.width=(tTotal?(left/tTotal*100):0)+'%';
+}
+function finish(){
+  running=false;clearInterval(iv);
+  $('clock').textContent='0:00';$('clock').classList.add('fin');
+  $('tmeta').textContent='Rest over. Go.';$('tbar').style.width='0%';
+  if(beep){tone(0,880);tone(0.3,880);tone(0.6,1175)}
+  if(navigator.vibrate){try{navigator.vibrate([200,100,200,100,300])}catch(e){}}
+  var dk=$('dock');dk.classList.add('flash');setTimeout(function(){dk.classList.remove('flash')},2200);
+}
+function stopTimer(){
+  running=false;clearInterval(iv);
+  $('clock').textContent='0:00';$('clock').classList.remove('fin');
+  $('tmeta').textContent='Tap a time to start';$('tbar').style.width='0%';
+}
+function adjust(sec){
+  if(!running){ if(sec>0) startTimer(sec,''); return }
+  tEnd+=sec*1000; tTotal=Math.max(tTotal,Math.ceil((tEnd-Date.now())/1000)); tick();
+}
+document.addEventListener('visibilitychange',function(){ if(document.visibilityState==='visible'){ tick(); acquireWake() } });
+
+/* ---------- Keep screen awake ---------- */
+var lock=null, vidOn=false, wakeErr='';
+function startVideo(){
+  var v=$('nosleep'); if(!v||vidOn) return;
+  v.muted=true;
+  var p=v.play();
+  if(p&&p.then){p.then(function(){vidOn=true;renderToggles()}).catch(function(e){wakeErr=(wakeErr?wakeErr+'; ':'')+'video '+(e&&e.name||'blocked');renderToggles()})}
+  else{vidOn=!v.paused;renderToggles()}
+}
+function stopVideo(){var v=$('nosleep');if(v){try{v.pause()}catch(e){}}vidOn=false}
+function acquireWake(){
+  if(!wantWake||document.visibilityState!=='visible') return;
+  if(vidOn){var vv=$('nosleep');if(vv&&vv.paused){vv.play().catch(function(){vidOn=false;renderToggles()})}}
+  if('wakeLock' in navigator){
+    if(!lock){
+      navigator.wakeLock.request('screen').then(function(l){
+        lock=l;wakeErr='';stopVideo();renderToggles();
+        l.addEventListener('release',function(){lock=null;renderToggles()});
+      }).catch(function(e){lock=null;wakeErr=(e&&e.name)||'request failed';startVideo();renderToggles()});
+    }
+  } else { startVideo() }
+}
+function releaseWake(){ if(lock){lock.release().catch(function(){});lock=null} stopVideo(); renderToggles() }
+
+/* ---------- Wire up ---------- */
+$('presets').innerHTML = PRESETS.map(function(s){return '<button class="pre" data-s="'+s+'">'+(s>=120?fmt(s):s)+'</button>'}).join('');
+$('presets').addEventListener('click',function(e){var b=e.target.closest('.pre');if(b) startTimer(+b.dataset.s,'')});
+$('minus').addEventListener('click',function(){adjust(-15)});
+$('plus').addEventListener('click',function(){adjust(15)});
+$('stop').addEventListener('click',stopTimer);
+
+$('tabs').addEventListener('click',function(e){
+  var b=e.target.closest('.tab');if(!b) return;
+  tab=+b.dataset.i;sset('last-tab',tab);loadStep();renderTabs();renderBody();window.scrollTo(0,0);
+});
+$('prev').addEventListener('click',function(){go(stepIdx-1)});
+$('next').addEventListener('click',function(){go(stepIdx+1)});
+$('list').addEventListener('click',function(e){
+  var b=e.target.closest('[data-act]');if(!b||b.disabled) return;
+  var ei=+b.dataset.ei, act=b.dataset.act;
+  if(act==='up') bump(ei,1);
+  else if(act==='down') bump(ei,-1);
+  else if(act==='toggle'){ var ex=days[tab].ex[ei]; bump(ei, count(ex)>=ex.sets?-ex.sets:1) }
+});
+$('list').addEventListener('toggle',function(e){
+  var d=e.target; if(d.tagName==='DETAILS'&&d.dataset.k) openNotes[d.dataset.k]=d.open;
+},true);
+
+// swipe left/right to change step
+(function(){
+  var x0=0,y0=0,t0=0;
+  var el=document.body;
+  el.addEventListener('touchstart',function(e){var t=e.touches[0];x0=t.clientX;y0=t.clientY;t0=Date.now()},{passive:true});
+  el.addEventListener('touchend',function(e){
+    if($('editor').classList.contains('open')||$('settings').classList.contains('open')) return;
+    var t=e.changedTouches[0],dx=t.clientX-x0,dy=t.clientY-y0;
+    if(Math.abs(dx)>70&&Math.abs(dy)<45&&Date.now()-t0<600){ go(stepIdx+(dx<0?1:-1)) }
+  },{passive:true});
+})();
+
+$('tgAuto').addEventListener('click',function(){auto=!auto;sset('auto',auto);renderToggles()});
+$('tgBeep').addEventListener('click',function(){beep=!beep;sset('beep',beep);renderToggles();if(beep){audio();tone(0,880)}});
+$('tgWake').addEventListener('click',function(){
+  wantWake=!wantWake;sset('wake',wantWake);
+  if(wantWake) acquireWake(); else releaseWake();
+});
+document.addEventListener('pointerdown',function(){ if(wantWake&&!lock&&!vidOn) acquireWake() });
+
+/* Settings + editor */
+$('setBtn').addEventListener('click',function(){renderToggles();$('settings').classList.add('open')});
+$('stClose').addEventListener('click',function(){$('settings').classList.remove('open')});
+$('stReset').addEventListener('click',function(){done={};sset(doneKey(),done);renderBody();$('settings').classList.remove('open')});
+$('stEdit').addEventListener('click',function(){$('settings').classList.remove('open');$('ta').value=routineText;$('err').textContent='';$('editor').classList.add('open')});
+$('edCancel').addEventListener('click',function(){$('editor').classList.remove('open')});
+$('edSample').addEventListener('click',function(){$('ta').value=SAMPLE});
+$('edCopy').addEventListener('click',function(){
+  var ta=$('ta');
+  function ok(){$('err').style.color='var(--muted)';$('err').textContent='Copied.'}
+  function fallback(){ta.focus();ta.select();try{document.execCommand('copy');ok()}catch(e){$('err').textContent='Select the text and copy it manually.'}}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(ta.value).then(ok,fallback)}else fallback();
+});
+$('edSave').addEventListener('click',function(){
+  var txt=$('ta').value, parsed=parse(txt);
+  $('err').style.color='';
+  if(!parsed.length){$('err').textContent='No exercises found. Start with a "# Workout name" line, then one exercise per line.';return}
+  routineText=txt;days=parsed;
+  sset('routine-text',txt);
+  if(tab>=days.length) tab=0;
+  done={};sset(doneKey(),done);
+  loadStep();
+  $('editor').classList.remove('open');renderAll();
+});
+
+loadStep();
+renderAll();
+acquireWake();
+})();
+</script>
+</body>
+</html>
